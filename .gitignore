@@ -1,8 +1,6 @@
 *.iml
 .gradle
 .idea
-/build
-.DS_Store
 /app/build
 gradlew
 gradlew.bat
