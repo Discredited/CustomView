@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">CustomView</string>
+
+    <string name="classify_name">分类名称</string>
+    <string name="classify_description">分类描述</string>
 </resources>
