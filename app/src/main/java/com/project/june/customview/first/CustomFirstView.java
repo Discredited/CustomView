@@ -8,6 +8,8 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.project.june.customview.R;
+
 /**
  * @author <a href="mailto:xujun@snqu.com">徐俊</a>
  * @version 2.0.0
@@ -36,6 +38,7 @@ public class CustomFirstView extends View {
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);//开启抗锯齿
         textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         textPaint.setStyle(Paint.Style.FILL);
+        textPaint.setTextSize(getContext().getResources().getDimensionPixelSize(R.dimen.text_size_10));
     }
 
     //只重写 onDraw()
@@ -51,8 +54,8 @@ public class CustomFirstView extends View {
         //第三个参数:半径
         //第三个参数: paint(画笔颜料)
         String drawCircle = "画一个圆";
-        canvas.drawText(drawCircle, 50, 25, paint);
-        canvas.drawCircle(100, 100, 50, textPaint);
+        canvas.drawText(drawCircle, 50, 25, textPaint);
+        canvas.drawCircle(100, 100, 50, paint);
 
         //画一个矩形
         //第一种方式
@@ -61,6 +64,8 @@ public class CustomFirstView extends View {
         //不建议不是不允许  只是要尽量避免
         //canvas.drawRect(new RectF(200, 50, 400, 150), paint);
         //第二种方式
+        String drawRect = "画一个矩形";
+        canvas.drawText(drawRect, 200, 25, textPaint);
         canvas.drawRect(200, 50, 400, 150, paint);
 
         //绘制View的填充颜色
