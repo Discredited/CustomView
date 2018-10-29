@@ -34,9 +34,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
         List<ClassifyBean> list = new ArrayList<>();
-        list.add(new ClassifyBean("自定义View初始", "自定义View的基础知识"));
-        adapter.setItemList(list, true);
+        list.add(new ClassifyBean("自定义View 初始", "自定义View的简单图形绘制方法 drawXXXX()"));
+        list.add(new ClassifyBean("自定义View 初始", "自定义View的使用路径绘制复杂图形 drawPath()"));
         list.add(new ClassifyBean("自定义TanTagView", "摊摊标签View"));
+        adapter.setItemList(list, true);
         adapter.setItemList(list, true);
     }
 
@@ -48,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 if (position == 0) {
                     FirstCustomActivity.startThis(MainActivity.this);
                 } else if (position == 1) {
+                    SecondCustomActivity.startThis(MainActivity.this);
+                } else if (position == 2) {
                     TanTagViewActivity.startThis(MainActivity.this);
                 }
             }

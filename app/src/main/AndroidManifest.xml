@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.FirstCustomActivity" />
+        <activity android:name=".activity.SecondCustomActivity"></activity>
         <activity android:name=".activity.TanTagViewActivity"></activity>
     </application>
 

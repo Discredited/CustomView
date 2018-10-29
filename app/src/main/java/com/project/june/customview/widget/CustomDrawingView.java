@@ -1,4 +1,4 @@
-package com.project.june.customview.first;
+package com.project.june.customview.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -18,21 +18,21 @@ import com.project.june.customview.R;
  * 注释的代码都是可用代码  演示不同的绘制方式和重载方法
  * @time 2018/10/25 10:47
  */
-public class CustomFirstView extends View {
+public class CustomDrawingView extends View {
 
     private Paint paint;
     private Paint textPaint;
     private int backgroundColor;
 
-    public CustomFirstView(Context context) {
+    public CustomDrawingView(Context context) {
         this(context, null);
     }
 
-    public CustomFirstView(Context context, @Nullable AttributeSet attrs) {
+    public CustomDrawingView(Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public CustomFirstView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public CustomDrawingView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initPaint();
     }
@@ -43,7 +43,7 @@ public class CustomFirstView extends View {
         textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         //Paint.Style.FILL Paint填充样式-填充满
         textPaint.setStyle(Paint.Style.FILL);
-        textPaint.setTextSize(getContext().getResources().getDimensionPixelSize(R.dimen.text_size_10));
+        textPaint.setTextSize(getContext().getResources().getDimensionPixelSize(R.dimen.text_size_12));
         backgroundColor = Color.parseColor("#2adecb");
     }
 
@@ -204,6 +204,6 @@ public class CustomFirstView extends View {
 
         String string = "所有的文字和形状都是在一个View里面绘制的";
         textPaint.setColor(Color.parseColor("#ef5050"));
-        canvas.drawText(string,50,600,textPaint);
+        canvas.drawText(string, 50, 600, textPaint);
     }
 }
