@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 import com.project.june.customview.R;
@@ -65,7 +66,7 @@ public class TanTagView extends View {
         float bgStart = getPaddingStart();
         float bgEnd;
         float bgTop = getPaddingTop();
-        float textHeight = (textPaint.getFontMetrics().bottom - textPaint.getFontMetrics().top);
+        float textHeight = textPaint.getFontSpacing();
         float bgBottom = bgTop + textHeight + tagPaddingVertical * 2;
 
         for (int i = 0; i < tagList.size(); i++) {
@@ -76,7 +77,8 @@ public class TanTagView extends View {
             bgPaint.setColor(getPaintColor(tagText, true));
             canvas.drawRoundRect(bgStart, bgTop, bgEnd, bgBottom, tagRadius, tagRadius, bgPaint);
             float textStart = bgStart + tagPaddingHorizontal;
-            float textBottom = textHeight + (bgBottom - textHeight) / 2;
+            float textBottom = bgTop + textHeight - (bgBottom - textHeight) / 2;
+            Log.e("Sherry", "bgBottom: " + bgBottom + "    textBottom:" + textBottom);
             textPaint.setColor(getPaintColor(tagText, false));
             canvas.drawText(tagText, textStart, textBottom, textPaint);
         }
