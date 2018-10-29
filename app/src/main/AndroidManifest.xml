@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.FirstCustomActivity"></activity>
+        <activity android:name=".activity.FirstCustomActivity" />
+        <activity android:name=".activity.TanTagViewActivity"></activity>
     </application>
 
 </manifest>

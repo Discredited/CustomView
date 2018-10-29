@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="tag_margin">10dp</dimen>
+    <dimen name="tag_padding_vertical">2dp</dimen>
+    <dimen name="tag_padding_horizontal">10dp</dimen>
+    <dimen name="tag_radius">2dp</dimen>
+
     <dimen name="text_size_10">10sp</dimen>
     <dimen name="text_size_12">12sp</dimen>
 </resources>

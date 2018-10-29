@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         List<ClassifyBean> list = new ArrayList<>();
         list.add(new ClassifyBean("自定义View初始", "自定义View的基础知识"));
         adapter.setItemList(list, true);
+        list.add(new ClassifyBean("自定义TanTagView", "摊摊标签View"));
+        adapter.setItemList(list, true);
     }
 
     private void initRecyclerView() {
@@ -45,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view, int position, ClassifyBean itemData) {
                 if (position == 0) {
                     FirstCustomActivity.startThis(MainActivity.this);
+                } else if (position == 1) {
+                    TanTagViewActivity.startThis(MainActivity.this);
                 }
             }
         });
