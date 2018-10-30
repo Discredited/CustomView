@@ -66,10 +66,10 @@ public class TanTagView extends View {
         float bgEnd;
         float bgTop = getPaddingTop();
         //关于fotMetrics的属性介绍
-        //fotMetrics.top = top线y坐标 - baseLine线y坐标（负值）           top到baseline的距离
-        //fontMetrics.ascent = ascent线y坐标 - baseLine线y坐标（负值）    ascent到baseline的距离
+        //fotMetrics.top      = top线y坐标     - baseLine线y坐标（负值）  top到baseline的距离
+        //fontMetrics.ascent  = ascent线y坐标  - baseLine线y坐标（负值）  ascent到baseline的距离
         //fontMetrics.descent = descent线y坐标 - baseLine线y坐标（正值）  descent与baseline的距离
-        //fontMetrics.bottom = bottom线y坐标 - baseLine线y坐标（正值）    bottom与baseline的距离
+        //fontMetrics.bottom  = bottom线y坐标  - baseLine线y坐标（正值）  bottom与baseline的距离
         float textHeight = textPaint.descent() - textPaint.ascent();
         float bgBottom = bgTop + textHeight + tagPaddingVertical * 2;
         float textBottom = bgTop + textHeight + tagPaddingVertical - textPaint.descent();
