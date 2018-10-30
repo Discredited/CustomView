@@ -1,6 +1,8 @@
 package com.project.june.customview.widget;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -23,6 +25,7 @@ public class CustomDrawingView extends View {
     private Paint paint;
     private Paint textPaint;
     private int backgroundColor;
+    private Bitmap bitmap;
 
     public CustomDrawingView(Context context) {
         this(context, null);
@@ -45,6 +48,8 @@ public class CustomDrawingView extends View {
         textPaint.setStyle(Paint.Style.FILL);
         textPaint.setTextSize(getContext().getResources().getDimensionPixelSize(R.dimen.text_size_12));
         backgroundColor = Color.parseColor("#2adecb");
+
+        bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.avatar);
     }
 
     //只重写 onDraw()
@@ -62,12 +67,13 @@ public class CustomDrawingView extends View {
         //坐标系原点为View左上角的那个点  x轴从左往右为正(递增) y轴从上往下为正(递增) y轴与数学坐标系相反 这个很重要
 
         int firstStartX = 50;  //第一列开始位置
-        int secondStartX = 200;  //第二列开始位置
-        int thirdStartX = 450;  //第三列开始位置
+        int secondStartX = 250;  //第二列开始位置
+        int thirdStartX = 500;  //第三列开始位置
 
         int oneStartY = 50;  //第一行开始位置
         int twoStartY = 250;  //第二行开始位置
-        int threeStartY = 400;  //第三行开始位置
+        int threeStartY = 450;  //第三行开始位置
+        int fourthStartY = 650;  //第四行开始位置
 
         int textDistance = 20;  //文字与行开始位置的距离
 
@@ -197,6 +203,17 @@ public class CustomDrawingView extends View {
         //同上  只是设置了paint的样式
         canvas.drawArc(thirdStartX, threeStartY, arcLineEndX, arcLineEndY, 90, 200, false, paint);
 
+        //第四行
+        //drawBitmap
+        String drawBitmap = "画一个图片";
+        canvas.drawText(drawBitmap, firstStartX, fourthStartY - textDistance, textPaint);
+        if (null != bitmap) {
+            canvas.drawBitmap(bitmap, firstStartX, fourthStartY, null);
+//            Rect rectResource = new Rect(firstStartX, fourthStartY, firstStartX + 150, fourthStartY + 150);
+//            Rect rectTarget = new Rect(firstStartX, fourthStartY, firstStartX + 150, fourthStartY + 150);
+//            canvas.drawBitmap(bitmap, rectResource, rectTarget, null);
+        }
+
         //绘制View的填充颜色
         //绘制先后顺序的重要性
         //如果drawColor()在这里执行，那么前面的drawCircle()和drawRect()都会被覆盖
@@ -204,6 +221,6 @@ public class CustomDrawingView extends View {
 
         String string = "所有的文字和形状都是在一个View里面绘制的";
         textPaint.setColor(Color.parseColor("#ef5050"));
-        canvas.drawText(string, 50, 600, textPaint);
+        canvas.drawText(string, 50, fourthStartY + 200, textPaint);
     }
 }
