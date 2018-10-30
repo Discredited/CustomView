@@ -49,8 +49,8 @@ public class CustomPathView extends View {
         path = new Path();
         // 使用 path 对图形进行描述（这段描述代码不必看懂）
         path.addArc(200, 200, 400, 400, -225, 225);
-        //path.arcTo(400, 200, 600, 400, -180, 225, false);
-        //path.lineTo(400, 542);
+        path.arcTo(400, 200, 600, 400, -180, 225, false);
+        path.lineTo(400, 542);
     }
 
     //只重写 onDraw()

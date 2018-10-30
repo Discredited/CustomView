@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".activity.TanTagViewActivity">
 
-    <com.project.june.customview.first.TanTagView
+    <com.project.june.customview.widget.TanTagView
         android:id="@+id/tag_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:paddingTop="20dp"
+        android:paddingTop="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
