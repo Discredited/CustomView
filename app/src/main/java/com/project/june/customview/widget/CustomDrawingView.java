@@ -221,6 +221,6 @@ public class CustomDrawingView extends View {
 
         String string = "所有的文字和形状都是在一个View里面绘制的";
         textPaint.setColor(Color.parseColor("#ef5050"));
-        canvas.drawText(string, 50, fourthStartY + 200, textPaint);
+        canvas.drawText(string, 50, fourthStartY + 400, textPaint);
     }
 }
