@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new ClassifyBean("自定义View 初始", "自定义View的使用路径绘制复杂图形 drawPath()"));
         list.add(new ClassifyBean("自定义TanTagView", "摊摊标签View"));
         list.add(new ClassifyBean("Glide", "Glide"));
+        list.add(new ClassifyBean("ProgressBar", "自定义进度条"));
         adapter.setItemList(list, true);
     }
 
@@ -54,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
                     TanTagViewActivity.startThis(MainActivity.this);
                 } else if (position == 3) {
                     IndicatorActivity.startThis(MainActivity.this);
+                } else if (position == 4) {
+                    ProgressActivity.startThis(MainActivity.this);
                 }
             }
         });

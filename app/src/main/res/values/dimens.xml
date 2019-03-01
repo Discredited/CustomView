@@ -7,4 +7,9 @@
 
     <dimen name="text_size_10">10sp</dimen>
     <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_30">30sp</dimen>
+
+    <dimen name="progress_offset">10dp</dimen>
+    <dimen name="experience_progress_offset">5dp</dimen>
 </resources>

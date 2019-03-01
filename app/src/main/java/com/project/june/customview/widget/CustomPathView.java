@@ -23,6 +23,8 @@ public class CustomPathView extends View {
     private Paint paint;
     private Paint textPaint;
     private Path path;
+    private Path trianglePath;
+    private Path rectPath;
 
     public CustomPathView(Context context) {
         this(context, null);
@@ -51,6 +53,28 @@ public class CustomPathView extends View {
         path.addArc(200, 200, 400, 400, -225, 225);
         path.arcTo(400, 200, 600, 400, -180, 225, false);
         path.lineTo(400, 542);
+
+        trianglePath = new Path();
+        trianglePath.moveTo(200, 700);
+        trianglePath.lineTo(500, 700);
+        trianglePath.lineTo(350, 850);
+        trianglePath.lineTo(200, 700);
+        trianglePath.close();
+
+        rectPath = new Path();
+        rectPath.addArc(200, 1000, 400, 1200, 180, 90);
+        rectPath.moveTo(300,1000);
+        rectPath.lineTo(500, 1000);
+        rectPath.arcTo(400, 1000, 600, 1200, -90, 90,false);
+        rectPath.moveTo(600,1100);
+        rectPath.lineTo(600, 1200);
+        rectPath.arcTo(400, 1100, 600, 1300, 0, 90,false);
+        rectPath.moveTo(500,1300);
+        rectPath.lineTo(300, 1300);
+        rectPath.arcTo(200, 1200, 400, 1300, 90, 90,false);
+        rectPath.moveTo(200,1200);
+        rectPath.lineTo(200, 1100);
+        rectPath.close();
     }
 
     //只重写 onDraw()
@@ -59,5 +83,8 @@ public class CustomPathView extends View {
         super.onDraw(canvas);
 
         canvas.drawPath(path, paint); // 绘制出 path 描述的图形（心形），大功告成
+        canvas.drawPath(trianglePath, paint); // 绘制出 path 描述的图形（心形），大功告成
+        canvas.drawPath(rectPath, paint); // 绘制出 path 描述的图形（心形），大功告成
+
     }
 }
