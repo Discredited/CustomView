@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         list.add(new ClassifyBean("自定义TanTagView", "摊摊标签View"));
         list.add(new ClassifyBean("Glide", "Glide"));
         list.add(new ClassifyBean("ProgressBar", "自定义进度条"));
+        list.add(new ClassifyBean("Progress", "模卡进度条"));
+        list.add(new ClassifyBean("Bitmap", "bitmap"));
         adapter.setItemList(list, true);
     }
 
@@ -54,9 +56,13 @@ public class MainActivity extends AppCompatActivity {
                 } else if (position == 2) {
                     TanTagViewActivity.startThis(MainActivity.this);
                 } else if (position == 3) {
-                    IndicatorActivity.startThis(MainActivity.this);
+                    GlideActivity.startThis(MainActivity.this);
                 } else if (position == 4) {
                     ProgressActivity.startThis(MainActivity.this);
+                } else if (position == 5) {
+                    MochaProgressActivity.startThis(MainActivity.this);
+                } else if (position == 6) {
+                    BitmapActivity.startThis(MainActivity.this);
                 }
             }
         });
