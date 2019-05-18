@@ -88,14 +88,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        public void onBindViewHolder(@NonNull ClassifyViewHolder holder, final int position) {
+        public void onBindViewHolder(@NonNull final ClassifyViewHolder holder, int position) {
             final ClassifyBean bean = items.get(position);
             holder.bindData(position, bean);
             if (null != itemClickListener) {
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        itemClickListener.onClick(v, position, bean);
+                        itemClickListener.onClick(v, holder.getAdapterPosition(), bean);
                     }
                 });
             }
