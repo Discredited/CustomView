@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.MochaProgressActivity">
+    tools:context=".ui.progress.MochaProgressActivity">
 
-    <com.project.june.customview.widget.MochaProgressView
+    <com.project.june.customview.ui.progress.MochaProgressView
         android:id="@+id/progress_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

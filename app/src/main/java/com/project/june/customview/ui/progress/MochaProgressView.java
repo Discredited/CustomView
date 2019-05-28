@@ -1,4 +1,4 @@
-package com.project.june.customview.widget;
+package com.project.june.customview.ui.progress;
 
 import android.content.Context;
 import android.graphics.Canvas;

@@ -1,4 +1,4 @@
-package com.project.june.customview.widget;
+package com.project.june.customview.ui.tantag;
 
 import android.content.Context;
 import android.graphics.Canvas;

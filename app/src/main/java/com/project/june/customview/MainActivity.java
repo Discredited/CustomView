@@ -1,4 +1,4 @@
-package com.project.june.customview.activity;
+package com.project.june.customview;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,8 +10,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.project.june.customview.R;
 import com.project.june.customview.bean.ClassifyBean;
+import com.project.june.customview.ui.first.FirstCustomActivity;
+import com.project.june.customview.ui.level.ProgressActivity;
+import com.project.june.customview.ui.progress.MochaProgressActivity;
+import com.project.june.customview.ui.second.SecondCustomActivity;
+import com.project.june.customview.ui.tantag.TanTagViewActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,10 +41,8 @@ public class MainActivity extends AppCompatActivity {
         list.add(new ClassifyBean("自定义View 初始", "自定义View的简单图形绘制方法 drawXXXX()"));
         list.add(new ClassifyBean("自定义View 初始", "自定义View的使用路径绘制复杂图形 drawPath()"));
         list.add(new ClassifyBean("自定义TanTagView", "摊摊标签View"));
-        list.add(new ClassifyBean("Glide", "Glide"));
         list.add(new ClassifyBean("ProgressBar", "自定义进度条"));
         list.add(new ClassifyBean("Progress", "模卡进度条"));
-        list.add(new ClassifyBean("Bitmap", "bitmap"));
         adapter.setItemList(list, true);
     }
 
@@ -56,13 +58,9 @@ public class MainActivity extends AppCompatActivity {
                 } else if (position == 2) {
                     TanTagViewActivity.startThis(MainActivity.this);
                 } else if (position == 3) {
-                    GlideActivity.startThis(MainActivity.this);
-                } else if (position == 4) {
                     ProgressActivity.startThis(MainActivity.this);
-                } else if (position == 5) {
+                } else if (position == 4) {
                     MochaProgressActivity.startThis(MainActivity.this);
-                } else if (position == 6) {
-                    BitmapActivity.startThis(MainActivity.this);
                 }
             }
         });

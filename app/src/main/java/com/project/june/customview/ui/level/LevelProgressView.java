@@ -1,4 +1,4 @@
-package com.project.june.customview.widget;
+package com.project.june.customview.ui.level;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
