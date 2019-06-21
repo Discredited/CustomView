@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.project.june.customview.CustomApplication;
 import com.project.june.customview.R;
 
 /**
@@ -24,5 +25,7 @@ public class FirstCustomActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_custom);
+
+        CustomApplication.getRefWatcher().watch(this);
     }
 }
