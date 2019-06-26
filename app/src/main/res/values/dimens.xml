@@ -12,4 +12,7 @@
 
     <dimen name="progress_offset">10dp</dimen>
     <dimen name="experience_progress_offset">5dp</dimen>
+
+    <dimen name="color_pick_out_width">2dp</dimen>
+    <dimen name="color_pick_inner_padding">2dp</dimen>
 </resources>

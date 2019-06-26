@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.project.june.customview.bean.ClassifyBean;
+import com.project.june.customview.ui.color.ColorActivity;
 import com.project.june.customview.ui.first.FirstCustomActivity;
 import com.project.june.customview.ui.level.ProgressActivity;
 import com.project.june.customview.ui.progress.MochaProgressActivity;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new ClassifyBean("自定义TanTagView", "摊摊标签View"));
         list.add(new ClassifyBean("ProgressBar", "自定义进度条"));
         list.add(new ClassifyBean("Progress", "模卡进度条"));
+        list.add(new ClassifyBean("ColorView", "颜色选择"));
         adapter.setItemList(list, true);
     }
 
@@ -61,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
                     ProgressActivity.startThis(MainActivity.this);
                 } else if (position == 4) {
                     MochaProgressActivity.startThis(MainActivity.this);
+                } else if (position == 5) {
+                    ColorActivity.startThis(MainActivity.this);
                 }
             }
         });

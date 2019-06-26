@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ColorPickView">
+        <attr name="theme_color" format="color|reference" />
+        <attr name="out_width" format="dimension" />
+        <attr name="inner_padding" format="dimension" />
+        <attr name="is_picked" format="boolean" />
+    </declare-styleable>
+</resources>

@@ -23,6 +23,7 @@
         <activity android:name=".ui.first.FirstCustomActivity" />
         <activity android:name=".ui.second.SecondCustomActivity" />
         <activity android:name=".ui.tantag.TanTagViewActivity" />
+        <activity android:name=".ui.color.ColorActivity" />
     </application>
 
 </manifest>
