@@ -24,6 +24,7 @@
         <activity android:name=".ui.second.SecondCustomActivity" />
         <activity android:name=".ui.tantag.TanTagViewActivity" />
         <activity android:name=".ui.color.ColorActivity" />
+        <activity android:name=".ui.magnifier.MagnifierActivity" />
     </application>
 
 </manifest>

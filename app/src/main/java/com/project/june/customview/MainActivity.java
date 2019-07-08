@@ -14,6 +14,7 @@ import com.project.june.customview.bean.ClassifyBean;
 import com.project.june.customview.ui.color.ColorActivity;
 import com.project.june.customview.ui.first.FirstCustomActivity;
 import com.project.june.customview.ui.level.ProgressActivity;
+import com.project.june.customview.ui.magnifier.MagnifierActivity;
 import com.project.june.customview.ui.progress.MochaProgressActivity;
 import com.project.june.customview.ui.second.SecondCustomActivity;
 import com.project.june.customview.ui.tantag.TanTagViewActivity;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new ClassifyBean("ProgressBar", "自定义进度条"));
         list.add(new ClassifyBean("Progress", "模卡进度条"));
         list.add(new ClassifyBean("ColorView", "颜色选择"));
+        list.add(new ClassifyBean("MagnifierView", "放大镜效果"));
         adapter.setItemList(list, true);
     }
 
@@ -65,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
                     MochaProgressActivity.startThis(MainActivity.this);
                 } else if (position == 5) {
                     ColorActivity.startThis(MainActivity.this);
+                } else if (position == 6) {
+                    MagnifierActivity.start(MainActivity.this);
                 }
             }
         });
