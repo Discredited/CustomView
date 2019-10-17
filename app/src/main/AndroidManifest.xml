@@ -3,6 +3,7 @@
     package="com.project.june.customview">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".CustomApplication"
@@ -25,6 +26,9 @@
         <activity android:name=".ui.tantag.TanTagViewActivity" />
         <activity android:name=".ui.color.ColorActivity" />
         <activity android:name=".ui.magnifier.MagnifierActivity" />
+        <activity android:name=".ui.answer.AnswerRushActivity" />
+        <activity android:name=".ui.video.VideoActivity" />
+        <activity android:name=".ui.video.VideoListActivity" />
     </application>
 
 </manifest>

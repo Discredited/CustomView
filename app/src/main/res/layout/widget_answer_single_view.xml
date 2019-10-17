@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ic_answer_rect_background"
+    android:orientation="vertical"
+    android:paddingTop="30dp"
+    android:paddingBottom="30dp"
+    tools:parentTag="androidx.appcompat.widget.LinearLayoutCompat">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/answer_question_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="2dp"
+        android:lineSpacingMultiplier="1.2"
+        android:text="阿姆斯特朗回旋加速喷气式阿姆斯特朗炮“的名字出自哪部动漫?"
+        android:textColor="@color/color_text_33"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/answer_choose_a"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:lineSpacingExtra="2dp"
+        android:lineSpacingMultiplier="1.2"
+        android:text="银魂"
+        android:textColor="@color/selector_answer_text_color_33_to_white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="@drawable/selector_selected_answer_bg_choose" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/answer_choose_b"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:lineSpacingExtra="2dp"
+        android:lineSpacingMultiplier="1.2"
+        android:text="贤者之孙"
+        android:textColor="@color/selector_answer_text_color_33_to_white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="@drawable/selector_selected_answer_bg_choose" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/answer_choose_c"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:lineSpacingExtra="2dp"
+        android:lineSpacingMultiplier="1.2"
+        android:text="约会大作战"
+        android:textColor="@color/selector_answer_text_color_33_to_white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="@drawable/selector_selected_answer_bg_choose" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/answer_choose_d"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:lineSpacingExtra="2dp"
+        android:lineSpacingMultiplier="1.2"
+        android:text="女神异闻录"
+        android:textColor="@color/selector_answer_text_color_33_to_white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="@drawable/selector_selected_answer_bg_choose" />
+</merge>

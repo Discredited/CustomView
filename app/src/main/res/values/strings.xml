@@ -3,4 +3,6 @@
 
     <string name="classify_name">分类名称</string>
     <string name="classify_description">分类描述</string>
+
+    <string name="to_video_list">列表页面</string>
 </resources>

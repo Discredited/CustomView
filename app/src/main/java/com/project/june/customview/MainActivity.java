@@ -1,16 +1,17 @@
 package com.project.june.customview;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.project.june.customview.bean.ClassifyBean;
+import com.project.june.customview.ui.answer.AnswerRushActivity;
 import com.project.june.customview.ui.color.ColorActivity;
 import com.project.june.customview.ui.first.FirstCustomActivity;
 import com.project.june.customview.ui.level.ProgressActivity;
@@ -18,6 +19,7 @@ import com.project.june.customview.ui.magnifier.MagnifierActivity;
 import com.project.june.customview.ui.progress.MochaProgressActivity;
 import com.project.june.customview.ui.second.SecondCustomActivity;
 import com.project.june.customview.ui.tantag.TanTagViewActivity;
+import com.project.june.customview.ui.video.VideoActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
         list.add(new ClassifyBean("Progress", "模卡进度条"));
         list.add(new ClassifyBean("ColorView", "颜色选择"));
         list.add(new ClassifyBean("MagnifierView", "放大镜效果"));
+        list.add(new ClassifyBean("AnswerView", "答题相关View"));
+        list.add(new ClassifyBean("VideoPlayerView", "QAQ模卡视频播放View"));
         adapter.setItemList(list, true);
     }
 
@@ -69,13 +73,16 @@ public class MainActivity extends AppCompatActivity {
                     ColorActivity.startThis(MainActivity.this);
                 } else if (position == 6) {
                     MagnifierActivity.start(MainActivity.this);
+                } else if (position == 7) {
+                    AnswerRushActivity.start(MainActivity.this);
+                } else if (position == 8) {
+                    VideoActivity.start(MainActivity.this);
                 }
             }
         });
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         recyclerView.setAdapter(adapter);
         recyclerView.setHasFixedSize(true);
-
     }
 
     public static class ClassifyAdapter extends RecyclerView.Adapter<ClassifyAdapter.ClassifyViewHolder> {
@@ -98,12 +105,7 @@ public class MainActivity extends AppCompatActivity {
             final ClassifyBean bean = items.get(position);
             holder.bindData(position, bean);
             if (null != itemClickListener) {
-                holder.itemView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        itemClickListener.onClick(v, holder.getAdapterPosition(), bean);
-                    }
-                });
+                holder.itemView.setOnClickListener(v -> itemClickListener.onClick(v, holder.getAdapterPosition(), bean));
             }
         }
 
